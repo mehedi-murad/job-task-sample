@@ -35,7 +35,7 @@ const Signup = () => {
             avatar: data.photoURL,
           };
 
-          fetch("http://localhost:5000/users", {
+          fetch("job-task-server-ashy.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",

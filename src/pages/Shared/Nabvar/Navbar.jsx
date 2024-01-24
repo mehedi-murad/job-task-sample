@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import profileImg from "../../../assets/Profile/user.png"
 
 const Navbar = () => {
 
@@ -13,14 +14,14 @@ const Navbar = () => {
       };
 
   return (
-    <div className="">
+    <div className="glass">
       <div className="max-w-7xl mx-auto">
         <div className="navbar p-10">
           <div className="flex-1">
-            <h2 className="text-2xl font-bold text-white">JOB TASK</h2>
+            <h2 className="text-2xl font-bold">JOB TASK</h2>
           </div>
           <div className="flex-none">
-            <ul className="flex gap-8 text-white font-semibold">
+            <ul className="flex gap-8 font-semibold">
               <li>
                 <Link>
                     Homepage
@@ -43,7 +44,14 @@ const Navbar = () => {
               
 
               <li>
-                <h2 className="bg-[#F92659] text-white font-bold px-4 py-2 rounded-xl">{user?.displayName}</h2>
+                <h2 className="bg-[#F92659] text-white font-bold px-4 py-2 rounded-xl">
+                    {
+                        user ?
+                        <p>{user?.displayName}</p>
+                        :
+                        <p>User Name</p>
+                    }
+                </h2>
               </li>
             </ul>
             <div>
@@ -54,7 +62,7 @@ const Navbar = () => {
                     user ?
                     <img src={user?.photoURL} />
                     :
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src={profileImg} />
                 }
                 </div>
             </div>
