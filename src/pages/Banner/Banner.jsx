@@ -12,7 +12,7 @@ const Banner = () => {
             {user ?
                 <Lottie className='w-[750px]' animationData={animateImage}></Lottie>
                 :
-                <div className='mt-60'>
+                <div className='mt-60 p-5'>
                         <div className='text-white font-bold text-center space-y-2'>
                             <h2 className='text-4xl'>You want to see what we have in the Homepage?</h2>
                             <p className='text-2xl'>It's Magic! Press the Login Button.</p>
