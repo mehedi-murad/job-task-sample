@@ -19,7 +19,7 @@ const Login = () => {
         name: result.user?.displayName,
         email: result.user?.email,
       };
-      fetch("job-task-server-ashy.vercel.app/users", {
+      fetch("https://job-task-server-ashy.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
